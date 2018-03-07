@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glassfish-web-app>
+
+<!-- 
+<scanning-exclude>*</scanning-exclude>
+<scanning-include>imixs*</scanning-include>
+
+
+<classloading-delegate>true</classloading-delegate>
+<class-loader delegate="true" />
+
+ -->
+
+	<context-root>/nordic-workflow</context-root>
+	<property name="default-role-mapping" value="true">
+		<description>Enable default group to role mapping</description>
+	</property>
+
+</glassfish-web-app>
