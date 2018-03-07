@@ -6,6 +6,7 @@
 		<artifactId>payara-issue-2508</artifactId>
 		<version>1.0.0</version>
 	</parent>
+	<packaging>war</packaging>
 	<artifactId>payara-issue-2508-web</artifactId>
 
 	<build>
@@ -15,18 +16,6 @@
 				<artifactId>maven-war-plugin</artifactId>
 				<version>2.4</version>
 				<configuration>
-					<webResources>
-						<resource>
-							<filtering>true</filtering>
-							<!-- this is relative to the pom.xml directory -->
-							<directory>${custom.webResources}</directory>
-							<includes>
-								<include>**/WEB-INF/*</include>
-								<include>/src/main/resources/*</include>
-								<!-- include any other file types you want to filter -->
-							</includes>
-						</resource>
-					</webResources>
 				</configuration>
 			</plugin>
 		</plugins>
@@ -36,6 +25,15 @@
 			<groupId>com.rsoika</groupId>
 			<artifactId>payara-issue-2508-ejb</artifactId>
 			<version>${project.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.rsoika</groupId>
+			<artifactId>payara-issue-2508-lib</artifactId>
+			<version>${project.version}</version>
+			<scope>provided</scope>
 		</dependency>
 	</dependencies>
+	
 </project>

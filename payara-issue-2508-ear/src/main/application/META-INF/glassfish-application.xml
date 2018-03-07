@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glassfish-application>
+
+<!-- 
+<enable-implicit-cdi>true</enable-implicit-cdi>
+
+<scanning-exclude>*</scanning-exclude>
+<scanning-include>imixs*</scanning-include>
+
+<classloading-delegate>true</classloading-delegate>
+ -->
+
+
+</glassfish-application>

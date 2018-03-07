@@ -46,12 +46,6 @@ import javax.inject.Inject;
  * 
  */
 
-@DeclareRoles({ "org.imixs.ACCESSLEVEL.NOACCESS", "org.imixs.ACCESSLEVEL.READERACCESS",
-		"org.imixs.ACCESSLEVEL.AUTHORACCESS", "org.imixs.ACCESSLEVEL.EDITORACCESS",
-		"org.imixs.ACCESSLEVEL.MANAGERACCESS" })
-@RolesAllowed({ "org.imixs.ACCESSLEVEL.NOACCESS", "org.imixs.ACCESSLEVEL.READERACCESS",
-		"org.imixs.ACCESSLEVEL.AUTHORACCESS", "org.imixs.ACCESSLEVEL.EDITORACCESS",
-		"org.imixs.ACCESSLEVEL.MANAGERACCESS" })
 @Stateless
 @LocalBean
 public class DocumentService {

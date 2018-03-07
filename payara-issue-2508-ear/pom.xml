@@ -1,10 +1,77 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <groupId>com.rsoika</groupId>
-    <artifactId>payara-issue-2508</artifactId>
-    <version>1.0.0</version>
-  </parent>
-  <artifactId>payara-issue-2508-ear</artifactId>
-  <packaging>war</packaging>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.rsoika</groupId>
+		<artifactId>payara-issue-2508</artifactId>
+		<version>1.0.0</version>
+	</parent>
+	<artifactId>payara-issue-2508-ear</artifactId>
+	<packaging>ear</packaging>
+
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-ear-plugin</artifactId>
+				<version>2.6</version>
+				<configuration>
+					<version>6</version>
+					<applicationName>${imixs-office.applicationname}</applicationName>
+					<defaultLibBundleDir>lib</defaultLibBundleDir>
+					<filtering>true</filtering>
+
+					<modules>
+						<!-- Web Gui -->
+						<webModule>
+							<groupId>com.rsoika</groupId>
+							<artifactId>payara-issue-2508-web</artifactId>
+							<contextRoot>/test</contextRoot>
+						</webModule>
+
+						<ejbModule>
+							<groupId>com.rsoika</groupId>
+							<artifactId>payara-issue-2508-ejb</artifactId>
+						</ejbModule>
+
+						<JarModule>
+							<groupId>com.rsoika</groupId>
+							<artifactId>payara-issue-2508-lib</artifactId>
+							<bundleDir>/</bundleDir>
+						</JarModule>
+					</modules>
+
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+
+	<dependencies>
+
+		<dependency>
+			<groupId>com.rsoika</groupId>
+			<artifactId>payara-issue-2508-lib</artifactId>
+			<version>${project.version}</version>
+			<type>jar</type>
+		</dependency>
+
+		<dependency>
+			<groupId>com.rsoika</groupId>
+			<artifactId>payara-issue-2508-ejb</artifactId>
+			<version>${project.version}</version>
+			<type>ejb</type>
+		</dependency>
+
+		<dependency>
+			<groupId>com.rsoika</groupId>
+			<artifactId>payara-issue-2508-web</artifactId>
+			<version>${project.version}</version>
+			<type>war</type>
+		</dependency>
+
+
+
+	</dependencies>
 </project>

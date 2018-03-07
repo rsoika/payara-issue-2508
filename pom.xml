@@ -1,23 +1,25 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.rsoika</groupId>
-  <artifactId>payara-issue-2508</artifactId>
-  <version>1.0.0</version>
-  <packaging>pom</packaging>
-  <name>demo</name>
-  
-  
-  <modules>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.rsoika</groupId>
+	<artifactId>payara-issue-2508</artifactId>
+	<version>1.0.0</version>
+	<packaging>pom</packaging>
+	<name>demo</name>
+
+
+	<modules>
+		<module>payara-issue-2508-ear</module>
 		<module>payara-issue-2508-ejb</module>
 		<module>payara-issue-2508-web</module>
-		<module>payara-issue-2508-ear</module>
-  </modules>
-  
-  
-  	<properties>
+		<module>payara-issue-2508-lib</module>
+	</modules>
+
+
+	<properties>
 		<project.build.sourceEncoding>ISO-8859-1</project.build.sourceEncoding>
 
-	
+
 	</properties>
 
 
@@ -55,9 +57,6 @@
 	</build>
 	<dependencyManagement>
 		<dependencies>
-			
-
-
 		</dependencies>
 	</dependencyManagement>
 	<dependencies>
@@ -77,5 +76,5 @@
 		</dependency>
 	</dependencies>
 
-	
+
 </project>
