@@ -1,15 +1,14 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <groupId>com.rsoika</groupId>
-    <artifactId>payara-issue-2508</artifactId>
-    <version>1.0.0</version>
-  </parent>
-  <artifactId>payara-issue-2508-ejb</artifactId>
-  
-  
-  
-  	
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.rsoika</groupId>
+		<artifactId>payara-issue-2508</artifactId>
+		<version>1.0.0</version>
+	</parent>
+	<artifactId>payara-issue-2508-ejb</artifactId>
+	<packaging>ejb</packaging>
+
 	<build>
 		<plugins>
 			<plugin>
@@ -19,16 +18,16 @@
 				<configuration>
 					<ejbVersion>3.0</ejbVersion>
 					<archive>
-						<!-- add the EJB module imixs-workflow-jee-impl - !DO NOT format this line! -->
+						<!-- add the EJB module -->
 						<manifestEntries>
-							<Class-Path>payara-issue-2508-lib-1.0.0.jar </Class-Path>
+							<Class-Path>payara-issue-2508-lib-1.0.0.jar</Class-Path>
 						</manifestEntries>
 					</archive>
 				</configuration>
 			</plugin>
 		</plugins>
 	</build>
-	
+
 	<dependencies>
 		<dependency>
 			<groupId>com.rsoika</groupId>
@@ -36,6 +35,6 @@
 			<version>${project.version}</version>
 		</dependency>
 	</dependencies>
-	
-  
+
+
 </project>

@@ -18,7 +18,7 @@
 				<version>2.6</version>
 				<configuration>
 					<version>6</version>
-					<applicationName>${imixs-office.applicationname}</applicationName>
+					<applicationName>test</applicationName>
 					<defaultLibBundleDir>lib</defaultLibBundleDir>
 					<filtering>true</filtering>
 
