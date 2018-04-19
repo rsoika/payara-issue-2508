@@ -27,17 +27,7 @@
 
 package com.rsoika;
 
-import java.util.logging.Logger;
-
-import javax.annotation.Resource;
-import javax.annotation.security.DeclareRoles;
-import javax.annotation.security.RolesAllowed;
-import javax.ejb.LocalBean;
-import javax.ejb.SessionContext;
-import javax.ejb.Stateless;
-import javax.enterprise.event.Event;
-import javax.enterprise.inject.spi.BeanManager;
-import javax.inject.Inject;
+import javax.ejb.Local;
 
 /**
  * Test Service * @author rsoika
@@ -46,45 +36,7 @@ import javax.inject.Inject;
  * 
  */
 
-@Stateless
-@LocalBean
-public class DocumentService {
-
-	@Resource
-	SessionContext ctx;
-
-	@Inject
-	protected Event<DocumentEvent> events;
-
-	@Inject
-	BeanManager beanManager;
-
-	private final static Logger logger = Logger.getLogger(DocumentService.class.getName());
-
-	/**
-	 * 
-	 */
-	public String test() {
-		String result = "";
-		// cdi test
-
-		if (events != null) {
-			result = "CDI supported for Event<DocumentEvent> ";
-			logger.warning("CDI supported for Event<DocumentEvent> ");
-			events.fire(new DocumentEvent(DocumentEvent.ON_DOCUMENT_SAVE));
-		} else {
-			result = "Missing CDI support for Event<DocumentEvent> !";
-			logger.warning("Missing CDI support for Event<DocumentEvent> !");
-
-			if (beanManager == null) {
-				result += " - also benManager is null!";
-			} else {
-				// also null
-				beanManager.fireEvent(new DocumentEvent(DocumentEvent.ON_DOCUMENT_SAVE));
-			}
-		}
-
-		return result;
-	}
-
+@Local
+public interface DocumentService {
+    String test();
 }
