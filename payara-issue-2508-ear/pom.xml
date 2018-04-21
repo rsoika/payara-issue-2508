@@ -44,6 +44,7 @@
 						<JarModule>
 							<groupId>com.rsoika</groupId>
 							<artifactId>payara-issue-2508-impl</artifactId>
+							<bundleDir>/</bundleDir>
 						</JarModule>
 					</modules>
 
