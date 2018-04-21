@@ -41,11 +41,10 @@
 						</JarModule>
 						
 						
-						<JarModule>
+						<ejbModule>
 							<groupId>com.rsoika</groupId>
 							<artifactId>payara-issue-2508-impl</artifactId>
-							<bundleDir>/</bundleDir>
-						</JarModule>
+						</ejbModule>
 					</modules>
 
 				</configuration>
@@ -67,7 +66,7 @@
 			<groupId>com.rsoika</groupId>
 			<artifactId>payara-issue-2508-impl</artifactId>
 			<version>${project.version}</version>
-			<type>jar</type>
+			<type>ejb</type>
 		</dependency>
 
 		<dependency>

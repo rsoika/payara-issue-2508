@@ -18,10 +18,11 @@
 				<configuration>
 					<ejbVersion>3.3</ejbVersion>
 					<archive>
-						<!-- add the EJB module -->
+						<!-- add the EJB module 
 						<manifestEntries>
 							<Class-Path>lib/payara-issue-2508-lib-1.0.0.jar payara-issue-2508-impl-1.0.0.jar</Class-Path>
 						</manifestEntries>
+						-->
 					</archive>
 				</configuration>
 			</plugin>
