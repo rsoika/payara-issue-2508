@@ -13,7 +13,7 @@
 		<module>payara-issue-2508-ejb</module>
 		<module>payara-issue-2508-web</module>
 		<module>payara-issue-2508-lib</module>
-		<module>payara-issue-2508-impl</module>
+		
 	</modules>
 
 
