@@ -32,6 +32,13 @@
 			<version>${project.version}</version>
 			<scope>provided</scope>
 		</dependency>
+		
+		<dependency>
+			<groupId>com.rsoika</groupId>
+			<artifactId>payara-issue-2508-impl</artifactId>
+			<version>${project.version}</version>
+			<scope>provided</scope>
+		</dependency>
 	</dependencies>
 	
 </project>

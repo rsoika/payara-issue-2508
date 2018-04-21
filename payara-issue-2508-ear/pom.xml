@@ -39,6 +39,12 @@
 							<groupId>com.rsoika</groupId>
 							<artifactId>payara-issue-2508-lib</artifactId>
 						</JarModule>
+						
+						
+						<JarModule>
+							<groupId>com.rsoika</groupId>
+							<artifactId>payara-issue-2508-impl</artifactId>
+						</JarModule>
 					</modules>
 
 				</configuration>
@@ -52,6 +58,13 @@
 		<dependency>
 			<groupId>com.rsoika</groupId>
 			<artifactId>payara-issue-2508-lib</artifactId>
+			<version>${project.version}</version>
+			<type>jar</type>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.rsoika</groupId>
+			<artifactId>payara-issue-2508-impl</artifactId>
 			<version>${project.version}</version>
 			<type>jar</type>
 		</dependency>
