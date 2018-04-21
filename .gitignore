@@ -18,3 +18,4 @@ target/
 # ignore docker payara deployments 
 /src/docker/payara/deployments/
 /src/docker/payara/applications/
+/payara-issue-2508-web/nb-configuration.xml

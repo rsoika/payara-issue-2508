@@ -14,15 +14,9 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-ejb-plugin</artifactId>
-				<version>2.3</version>
+				<version>3.0.0</version>
 				<configuration>
-					<ejbVersion>3.0</ejbVersion>
-					<archive>
-						<!-- add the EJB module -->
-						<manifestEntries>
-							<Class-Path>payara-issue-2508-lib-1.0.0.jar</Class-Path>
-						</manifestEntries>
-					</archive>
+					<ejbVersion>3.3</ejbVersion>
 				</configuration>
 			</plugin>
 		</plugins>
